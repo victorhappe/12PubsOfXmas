@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071d16">
+    <meta name="description"
+        content="12 Pubs of Christmas – PG Christmas 2026. Modtag Praktikanten Jesus' velsignelse.">
+
+    <title>12 Pubs of Christmas | PG 2026</title>
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --green: #071d16;
+            --green-light: #143527;
+            --gold: #eec77b;
+            --cream: #f9e9c7;
+            --red: #9d1922;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: var(--green);
+            color: var(--cream);
+            font-family: "DM Sans", sans-serif;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            pointer-events: none;
+            background:
+                radial-gradient(circle at 70% 40%,
+                    rgba(190, 118, 35, .16),
+                    transparent 40%),
+                radial-gradient(circle at 5% 85%,
+                    rgba(103, 25, 28, .23),
+                    transparent 35%),
+                linear-gradient(135deg, #0c291f, #061711);
+        }
+
+        /* JULEPYNT */
+
+        .decor {
+            position: absolute;
+            font-size: clamp(2rem, 4vw, 4rem);
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        .decor-left {
+            top: 12px;
+            left: 20px;
+        }
+
+        .decor-right {
+            top: 12px;
+            right: 20px;
+        }
+
+        /* HERO */
+
+        .hero {
+            position: relative;
+            max-width: 1600px;
+            min-height: 100vh;
+            margin: auto;
+            padding: 65px 5% 45px;
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            align-items: center;
+            gap: 15px;
+            isolation: isolate;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 4;
+            text-align: center;
+        }
+
+        .eyebrow {
+            font-family: "Cinzel", serif;
+            color: var(--gold);
+            font-size: clamp(.75rem, 1.3vw, 1rem);
+            letter-spacing: 5px;
+            font-weight: 700;
+        }
+
+        .ornament {
+            color: var(--gold);
+            margin: 18px 0;
+            letter-spacing: 10px;
+            opacity: .85;
+        }
+
+        h1 {
+            font-family: "Cinzel", Georgia, serif;
+            font-weight: 900;
+            font-size: clamp(3.3rem, 7.3vw, 7.8rem);
+            line-height: .97;
+            letter-spacing: -4px;
+            margin: 20px 0;
+            color: var(--cream);
+            text-shadow: 0 4px 0 #785126, 0 12px 30px rgba(0, 0, 0, .4);
+        }
+
+        h1 span {
+            display: block;
+        }
+
+        .of {
+            display: block;
+            font-family: "Great Vibes", cursive;
+            font-size: clamp(2.4rem, 4vw, 4rem);
+            color: var(--gold);
+            margin: 4px 0;
+        }
+
+        .christmas {
+            color: var(--gold);
+        }
+
+        .date {
+            font-family: "Cinzel", serif;
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            letter-spacing: 5px;
+            margin-top: 30px;
+        }
+
+        .subtitle {
+            font-family: "Cinzel", serif;
+            font-size: clamp(.65rem, 1vw, .9rem);
+            letter-spacing: 3px;
+            line-height: 2;
+            margin: 22px auto 0;
+            color: var(--cream);
+        }
+
+        /* COUNTDOWN */
+
+        .countdown-panel {
+            margin: 42px auto 0;
+            max-width: 690px;
+            padding: 23px;
+            border: 2px solid var(--gold);
+            background: rgba(4, 23, 16, .85);
+            box-shadow: 0 0 35px rgba(235, 179, 74, .12);
+            border-radius: 5px;
+        }
+
+        .countdown-title {
+            font-family: "Cinzel", serif;
+            font-weight: 700;
+            font-size: clamp(.8rem, 1.3vw, 1.1rem);
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin: 0 0 18px;
+        }
+
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .time-box {
+            border: 1px solid var(--gold);
+            padding: 15px 5px;
+            background: rgba(2, 15, 10, .6);
+        }
+
+        .time-box strong {
+            display: block;
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.4rem, 3vw, 3.2rem);
+            color: var(--cream);
+        }
+
+        .time-box span {
+            display: block;
+            font-family: "Cinzel", serif;
+            font-size: .65rem;
+            letter-spacing: 1px;
+            margin-top: 8px;
+        }
+
+        /* JESUS */
+
+        .jesus-area {
+            position: relative;
+            align-self: end;
+            min-height: 650px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .halo {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border: 4px solid rgba(255, 210, 109, .8);
+            border-radius: 50%;
+            top: 9%;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow:
+                0 0 20px #ffca67,
+                0 0 70px rgba(255, 190, 73, .5),
+                inset 0 0 30px rgba(255, 190, 73, .3);
+            background: radial-gradient(circle,
+                    rgba(255, 202, 90, .17),
+                    transparent 70%);
+            pointer-events: none;
+        }
+
+        .jesus-button {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 600px;
+            border: 0;
+            padding: 0;
+            background: transparent;
+            cursor: pointer;
+            transition: transform .35s ease;
+        }
+
+        .jesus-button:hover {
+            transform: scale(1.035);
+        }
+
+        .jesus-button:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 6px;
+        }
+
+        .jesus-image {
+            display: block;
+            width: 100%;
+            max-height: 750px;
+            object-fit: contain;
+            object-position: bottom;
+            filter: drop-shadow(0 0 22px rgba(255, 193, 92, .3));
+            -webkit-mask-image: linear-gradient(to bottom,
+                    black 0%,
+                    black 85%,
+                    transparent 100%);
+            mask-image: linear-gradient(to bottom,
+                    black 0%,
+                    black 85%,
+                    transparent 100%);
+        }
+
+        .blessing-note {
+            position: absolute;
+            right: 0;
+            top: 23%;
+            z-index: 3;
+            font-family: "Great Vibes", cursive;
+            font-size: clamp(2rem, 3.5vw, 3.7rem);
+            line-height: 1.15;
+            color: var(--gold);
+            text-align: center;
+            transform: rotate(-8deg);
+            pointer-events: none;
+            text-shadow: 0 4px 12px #000;
+        }
+
+        .jesus-cta {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 4;
+            width: max-content;
+            max-width: 95%;
+            padding: 18px 28px;
+            background: var(--red);
+            border: 3px double var(--gold);
+            border-radius: 5px;
+            color: var(--cream);
+            font-family: "Cinzel", serif;
+            font-weight: 800;
+            font-size: clamp(.8rem, 1.2vw, 1.1rem);
+            letter-spacing: 2px;
+            text-align: center;
+            pointer-events: none;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, .5);
+        }
+
+        .jesus-cta small {
+            display: block;
+            font-size: .65rem;
+            margin-top: 6px;
+            letter-spacing: 1px;
+        }
+
+        /* SNE */
+
+        .snowflake {
+            position: fixed;
+            top: -25px;
+            z-index: 20;
+            color: white;
+            opacity: .65;
+            pointer-events: none;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* POPUP */
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, .85);
+            z-index: 100;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-box {
+            max-width: 500px;
+            width: 100%;
+            padding: 45px 30px;
+            text-align: center;
+            background: #103124;
+            border: 2px solid var(--gold);
+            box-shadow: 0 0 70px rgba(255, 198, 91, .2);
+        }
+
+        .modal-box h2 {
+            font-family: "Cinzel", serif;
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        .modal-box p {
+            line-height: 1.8;
+        }
+
+        .modal-emoji {
+            font-size: 3.5rem;
+        }
+
+        .close-btn {
+            margin-top: 20px;
+            padding: 15px 25px;
+            border: 2px solid var(--gold);
+            background: var(--red);
+            color: white;
+            font-family: "Cinzel", serif;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        /* MOBIL */
+
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 70px 5% 0;
+                gap: 20px;
+            }
+
+            h1 {
+                font-size: clamp(3rem, 11vw, 6rem);
+            }
+
+            .jesus-area {
+                min-height: 500px;
+                max-width: 520px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .halo {
+                width: 270px;
+                height: 270px;
+            }
+
+            .blessing-note {
+                top: 15%;
+                right: 0;
+            }
+
+            .jesus-cta {
+                bottom: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .eyebrow {
+                letter-spacing: 2px;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            .countdown-panel {
+                padding: 15px 10px;
+            }
+
+            .time-box {
+                padding: 12px 3px;
+            }
+
+            .time-box strong {
+                font-size: 1.4rem;
+            }
+
+            .time-box span {
+                font-size: .55rem;
+            }
+
+            .jesus-area {
+                min-height: 430px;
+            }
+
+            .halo {
+                width: 220px;
+                height: 220px;
+            }
+
+            .blessing-note {
+                font-size: 2.2rem;
+            }
+
+            .jesus-cta {
+                padding: 14px 16px;
+                font-size: .8rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .snowflake {
+                display: none;
+            }
+
+            .jesus-button {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="decor decor-left">🎄</div>
+    <div class="decor decor-right">🎄</div>
+
+    <main class="hero">
+
+        <!-- VENSTRE: TITEL OG COUNTDOWN -->
+
+        <div class="hero-content">
+            <p class="eyebrow">PG CHRISTMAS 2026</p>
+
+            <div class="ornament">✦ ─── ✦ ─── ✦</div>
+
+            <h1>
+                <span>12 PUBS</span>
+                <span class="of">of</span>
+                <span class="christmas">CHRISTMAS</span>
+            </h1>
+
+            <p class="date">12. DECEMBER 2026</p>
+
+            <p class="subtitle">
+                12 PUBS &nbsp; • &nbsp; 12 UDFORDRINGER
+                &nbsp; • &nbsp; ÉN VELSIGNELSE
+            </p>
+
+            <div class="countdown-panel">
+                <p class="countdown-title">
+                    NEDTÆLLING TIL JULEMIRAKLET
+                </p>
+
+                <div class="countdown">
+                    <div class="time-box">
+                        <strong id="days">00</strong>
+                        <span>DAGE</span>
+                    </div>
+
+                    <div class="time-box">
+                        <strong id="hours">00</strong>
+                        <span>TIMER</span>
+                    </div>
+
+                    <div class="time-box">
+                        <strong id="minutes">00</strong>
+                        <span>MIN</span>
+                    </div>
+
+                    <div class="time-box">
+                        <strong id="seconds">00</strong>
+                        <span>SEK</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HØJRE: JESUS -->
+
+        <div class="jesus-area">
+
+            <div class="halo"></div>
+
+            <button class="jesus-button" id="jesusBlessingBtn" type="button"
+                aria-label="Klik på Praktikanten Jesus for at modtage din velsignelse">
+                <img src="images/Bedende Jesus med ølkrans.png" alt="Praktikanten Jesus med øldåser i sin tornekrone"
+                    class="jesus-image">
+
+                <span class="jesus-cta">
+                    ✝ KLIK PÅ JESUS
+                    <small>FOR AT MODTAGE DIN VELSIGNELSE</small>
+                </span>
+            </button>
+
+            <div class="blessing-note">
+                Praktikanten<br>
+                Jesus<br>
+                velsigner dig.
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- VELSIGNELSE -->
+
+    <div class="modal" id="blessingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-box">
+            <div class="modal-emoji">🍺🙏🎄</div>
+
+            <h2 id="modalTitle">DU ER VELSIGNET!</h2>
+
+            <p>
+                I Faderens, Sønnens og den hellige pilsners navn.
+            </p>
+
+            <p>
+                Praktikanten Jesus har velsignet din deltagelse i
+                <strong>12 Pubs of Christmas</strong>
+                den 12. december 2026.
+            </p>
+
+            <p>
+                Må dine øl være kolde, dine point være lave,
+                og din juleånd være høj.
+            </p>
+
+            <button class="close-btn" id="closeModal" type="button">
+                AMEN & SKÅL 🍻
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // COUNTDOWN
+        // Foreløbig start kl. 12.00 dansk tid.
+
+        const eventDate = new Date(
+            "2026-12-12T12:00:00+01:00"
+        ).getTime();
+
+        function updateCountdown() {
+            const difference = eventDate - Date.now();
+
+            if (difference <= 0) {
+                document.querySelector(".countdown").innerHTML =
+                    '<h2 style="grid-column:1/-1;color:#eec77b;">PG CHRISTMAS ER I GANG! 🍻</h2>';
+                return;
+            }
+
+            const days = Math.floor(difference / 86400000);
+            const hours = Math.floor((difference / 3600000) % 24);
+            const minutes = Math.floor((difference / 60000) % 60);
+            const seconds = Math.floor((difference / 1000) % 60);
+
+            document.getElementById("days").textContent =
+                String(days).padStart(2, "0");
+
+            document.getElementById("hours").textContent =
+                String(hours).padStart(2, "0");
+
+            document.getElementById("minutes").textContent =
+                String(minutes).padStart(2, "0");
+
+            document.getElementById("seconds").textContent =
+                String(seconds).padStart(2, "0");
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+
+        // JESUS' VELSIGNELSE
+
+        const jesusBtn = document.getElementById("jesusBlessingBtn");
+        const modal = document.getElementById("blessingModal");
+        const closeBtn = document.getElementById("closeModal");
+
+        jesusBtn.addEventListener("click", () => {
+            modal.classList.add("active");
+            closeBtn.focus();
+        });
+
+        function closeBlessing() {
+            modal.classList.remove("active");
+            jesusBtn.focus();
+        }
+
+        closeBtn.addEventListener("click", closeBlessing);
+
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                closeBlessing();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && modal.classList.contains("active")) {
+                closeBlessing();
+            }
+        });
+
+
+        // SNEVEJR
+
+        function createSnowflake() {
+            const snowflake = document.createElement("span");
+            snowflake.className = "snowflake";
+            snowflake.textContent = "❄";
+
+            snowflake.style.left = Math.random() * 100 + "vw";
+            snowflake.style.fontSize = (Math.random() * 12 + 8) + "px";
+            snowflake.style.animationDuration = (Math.random() * 5 + 6) + "s";
+
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => snowflake.remove(), 11000);
+        }
+
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            setInterval(createSnowflake, 500);
+        }
+    </script>
+
+</body>
+
+</html>
